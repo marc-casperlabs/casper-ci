@@ -37,3 +37,10 @@ runs:
         ln -s $(which true) /tmp/overlay/cachepot
         echo "/tmp/overlay" >> ${GITHUB_PATH}
       shell: bash
+
+    - run: sudo apt-get update -y
+      shell: bash
+    - run: sudo apt-get install -y python3-pip supervisor
+      shell: bash
+    - run: sudo pip install tomlkit toml
+      shell: bash
