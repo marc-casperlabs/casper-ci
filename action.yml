@@ -30,3 +30,10 @@ runs:
         target: wasm32-unknown-unknown
 
     - uses: Swatinem/rust-cache@v1
+
+    - name: Provide dummy `cachepot`
+      run: |
+        mkdir -p /tmp/overlay
+        ln -s $(which true) /tmp/overlay/cachepot
+        echo "/tmp/overlay" >> ${GITHUB_PATH}
+      shell: bash
