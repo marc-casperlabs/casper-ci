@@ -40,7 +40,7 @@ runs:
 
     - run: sudo apt-get update -y
       shell: bash
-    - run: sudo apt-get install -y python3-pip supervisor
+    - run: sudo apt-get install -y python3-pip supervisor socat
       shell: bash
     - run: sudo pip install tomlkit toml
       shell: bash
